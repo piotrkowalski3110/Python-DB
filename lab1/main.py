@@ -54,7 +54,8 @@ def wyrazy(zdanie):
     print(wyrazy)
 
 def czestosc(zdanie):
-    for n in range (len(zdanie)):
+    pass
+
 
 """
 ###################### ZAD 1
