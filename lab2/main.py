@@ -10,8 +10,10 @@ def tagi(tag, tekst):
     tag1 = ("<"+tag+">"+tekst+"</"+tag+">")
     return tag1
 
-"""choinka("$",4,4);"""
+"""zad1"""
+choinka("$",4,4);
 
+"""zad2"""
 taga = tagi("h1","test")
 print(taga)
 
