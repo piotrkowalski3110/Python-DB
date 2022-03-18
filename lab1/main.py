@@ -1,15 +1,19 @@
 def palindrom(liczba):
     dl = len(str(liczba))
+    pal = 0
     for n in range (dl):
-        if n==0:
-            pierwsza = str(liczba)[0]
-        if n==dl-1:
-            ostatnia = str(liczba)[dl-1]
-
-    if pierwsza == ostatnia:
-        print("palindrom")
+        pierwsza = str(liczba)[n]
+        ostatnia = str(liczba)[dl-1-n]
+        if pierwsza != ostatnia:
+            pal = 0
+            break
+        else:
+            pal = 1
+    if pal == 1:
+        print("Palindrom")
     else:
-        print("nie palindrom")
+        print("NIe palindrom")
+
 
 def nowatablica(A, B):
     x = len(A)
@@ -59,7 +63,7 @@ def czestosc(zdanie):
 
 """
 ###################### ZAD 1
-liczba = 2562
+liczba = 26762
 palindrom(liczba)
 """
 
@@ -97,15 +101,9 @@ listacyfr(liczba)
 tabliczka()
 """
 
+"""
 ####################### ZAD 5
 zdanie = "Rather than building all of its functionality into its core, Python was designed to be highly extensible via modules, its compact modularity has made it particularly popular as a means of adding programmable interfaces to existing applications."
 wyrazy(zdanie)
 czestosc(zdanie)
-
-
-
-
-
-
-
-
+"""
