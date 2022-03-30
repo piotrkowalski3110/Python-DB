@@ -1,26 +1,18 @@
 class zarowka:
     def __init__(self, name, moc, napiecie):
-        self.name = name;
         print("Zarowka: "+name)
         print("Moc: "+moc)
         print("Napiecie: "+napiecie)
 
-    def stan(self, stanzarowki):
-        self.stanzarowki = stanzarowki
+    def stan(self, stan):
+        print(stan)
 
-        if stanzarowki == 1:
-            print("Włączona")
-            return stanzarowki
-        if stanzarowki == 0:
-            print("Wyłączona")
-            return stanzarowki
-
-    def onoff(stanzarowki):
-        if stanzarowki == 1:
-            stan = 0
+    def onoff(self, stan1):
+        if self.stan == 1:
+            self.stan1 = 0
             print("Wyłączam...")
-        if stanzarowki == 0:
-            stan = 1
+        if self.stan == 0:
+            self.stan1 = 1
             print("Włączam...")
 
     def dzwiek(self):
@@ -34,11 +26,12 @@ class jazeniowka (zarowka):
 
 z1 = zarowka("zarowka1", "230V", "50W")
 z1.stan(0)
+z1.onoff(1)
 
 print("\n")
 
 j1 = jazeniowka("Jazeniowka", "100V", "250W")
-j1.stan(1)
+j1.stan(0)
 j1.dzwiek()
 
 
