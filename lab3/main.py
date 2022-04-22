@@ -1,21 +1,33 @@
 class zarowka:
-    def __init__(self, name, moc, napiecie):
-        print("Zarowka: "+name)
-        print("Moc: "+moc)
-        print("Napiecie: "+napiecie)
+    def __init__(self, name, moc, napiecie, stan):
+        self.name = name
+        self.moc = moc
+        self.napiecie = napiecie
+        self.stan = stan
 
-    def stan(self, stan):
-        print(stan)
+    def info(self):
+        print("Zarowka: "+self.name)
+        print("Moc: "+self.moc)
+        print("Napiecie: "+self.napiecie)
 
-    def onoff(self, stan1):
+    def state(self):
+        print("Stan: ", end="")
+        print(self.stan)
+
+    def onoff(self):
         if self.stan == 1:
-            self.stan1 = 0
+            self.stan = 0
             print("Wyłączam...")
-        if self.stan == 0:
-            self.stan1 = 1
+            print("Stan: ",end="")
+            print(self.stan)
+        else:
+            self.stan = 1
             print("Włączam...")
+            print("Stan: ",end="")
+            print(self.stan)
 
     def dzwiek(self):
+        print("Bzzzzzz...")
         pass
 
 
@@ -24,15 +36,22 @@ class jazeniowka (zarowka):
         print("Brrrrr...")
 
 
-z1 = zarowka("zarowka1", "230V", "50W")
-z1.stan(0)
-z1.onoff(1)
+def swiatelka(obj):
+    obj.info()
+    obj.dzwiek()
+    obj.state()
+    obj.onoff()
+
+
+zarowka = zarowka("zarowka1", "230V", "50W", 1)
+swiatelka(zarowka)
+
 
 print("\n")
 
-j1 = jazeniowka("Jazeniowka", "100V", "250W")
-j1.stan(0)
-j1.dzwiek()
+jazeniowka = jazeniowka("Jazeniowka", "100V", "250W", 0)
+swiatelka(jazeniowka)
+
 
 
 
