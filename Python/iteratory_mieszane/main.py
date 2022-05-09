@@ -19,5 +19,6 @@ class MyNumbers:
         else:
             return self.i
 
+
 for x in MyNumbers(20):
-  print(x)
+    print(x)
