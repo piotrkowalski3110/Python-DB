@@ -1,14 +1,9 @@
 def Fibbo(start, end):
     a, b, n = 0, 1, 0
     while True:
-        if n in range(start, end):
-            if n == end - 1:
+        if n in range(start, end+1):
                 yield a
-            else:
-                yield a
-                yield b
-            a, b = b, a + b
-        if n == end:
+        if n > end:
             break
         else:
             a, b = b, a + b
